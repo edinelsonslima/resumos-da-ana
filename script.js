@@ -31,10 +31,11 @@ modal?.addEventListener('click', function ({ target }) {
 
 btnCloseModal?.addEventListener('click', handleClose);
 
-btnMessages?.forEach((btn) => {
+btnMessages?.forEach((btn, i) => {
   btn.addEventListener('click', () => {
-    modalContent.textContent = messages[btn.dataset.index];
-    modalTitle.textContent = `Mensagem ${btn.dataset.index}`;
+    const indexMessage = i + 1;
+    modalContent.textContent = messages[indexMessage];
+    modalTitle.textContent = `Mensagem ${indexMessage}`;
     handleOpen();
   });
 });
