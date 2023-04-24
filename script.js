@@ -35,7 +35,6 @@ btnMessages?.forEach((btn) => {
   btn.addEventListener('click', () => {
     modalContent.textContent = messages[btn.dataset.index];
     modalTitle.textContent = `Mensagem ${btn.dataset.index}`;
-    console.log(messages[btn.dataset.index]);
     handleOpen();
   });
 });
